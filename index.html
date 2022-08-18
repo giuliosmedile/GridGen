@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+</style>
+
+<script src="js/dna.js"></script>
+<script src="js/circles.js"></script>
+<script src="js/population.js"></script>
+<script src="js/sketch.js"></script>
+<meta charset="utf-8" />
+
+</head>
+<body>
+  
+  <div class="window">
+    <div class="title-bar"> 
+      <button aria-label="Close" class="close"></button>
+      <h1 class="title">Grid Generator</h1>
+      <button aria-label="Resize" disabled class="hidden"></button>
+    </div>
+    
+    <div class="window-pane">
+      <div id="input">
+      </div>
+      <div id="group">
+        <div id="p5Group"></div>
+        <div id="sliders"></div>
+      </div>
+      <div id="info">
+        <button onclick="startSimulation()" class="btn" id="fileupload">Restart Simulation</button>
+      </div>
+      <button onclick="stopSimulation()" class="btn">Stop Simulation</button>
+      <div id="bw">
+        <input id="checkbox" type="checkbox">
+        <label for="checkbox">Black & White</label>
+      </div>
+    </div>
+  </div>
+  
+  <div class="window">
+    <div class="window-pane">
+      <h3>What is this?</h3>
+      <p>This is a genetic simulation of a population trying to recreate an image as best as possible. The simulation will
+        run at will, and for each generation will display the best individual in the population.
+      </p>
+      <h3>How to use</h3>
+      <p>Upload an image with the button on the top left corner of the screen. The two sliders below the images control the
+        density of the recreated image and the population size. The simulation will start automatically when you upload an image.
+        <br />
+        After tweaking the parameters, please restart the simulation through the given button.
+        <br />
+        <br />
+        Note that the simulation is not perfect, but it can get better results with a higher population count and higher densities.
+        Ramping up the population size and lowering the density will however degrade the simulation's performance. Use at your own risk.
+        <br><br>
+        <u>A faster Java version is coming soon!</u>
+      </p>
+      <h3>Credits</h3>
+      <p>
+        This simulation was created by <a href="https://github.com/giuliosmedile">Giulio Smedile</a>. <br>
+        The wonderful CSS template <a href="https://sakofchit.github.io/system.css/">system.css</a> was used to style the page. <br>
+        The simulation has been heavily inspired by Daniel Shiffman's <a href="https://natureofcode.com/">The Nature of Code</a> book and his amazing <a href="https://www.youtube.com/thecodingtrain">YouTube channel</a>. <br>
+        Also huge thanks to the <a href="https://p5js.org/">p5.js</a> community and the <a href="https://processing.org/">Processing Foundation</a>.
+      </p>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
